@@ -1,32 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- for Responsive features -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
+    <link
+      href="https://fonts.googleapis.com/css?family=Bungee|Open+Sans:300,400,700i&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- App Font Styling for Nav title-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- App Font Styling for Write a New Tweet-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+    <!-- App Entering-new-tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- App existing-tweets CSS -->
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+
+    <!-- App Nav Bar CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+
+    <!-- External JS to launch JQUERY for counter -->
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
+
+    <!-- Tweet Time Stamp -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+    ></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
   </head>
 
   <body>
+    <a href="javascript:" id="return-to-top"><i class="arrow-up-button"></i></a>
 
-    <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <!-- Top nav bar (fixed) -->
+      <span class="pageTitle">TWEETER</span>
+      <span class="write-new-tweet-toggle"
+        ><strong>WRITE</strong> a new tweet <br />
+        <img
+          src="/images/arrow.png"
+          alt="arrow for you to click to add new tweet"
+          class="bounce"
+      /></span>
     </nav>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-    </main>
-
+    <div class="desktop-resp">
+      <header class="topPart">
+        <div>
+          <img " src="/images/profile-hex.png" alt="Profile Picture"
+          id="profile-pic">
+        </div>
+        <br />
+        <div>
+          <h2 class="yourName">Anchen Huang</h2>
+        </div>
+      </header>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div class="zero-msg">
+            <img src="/images/Stop-sign.png" class="stop-sign-pic" />TELL US HOW
+            YOU FEEL!<img src="/images/Stop-sign.png" class="stop-sign-pic" />
+          </div>
+          <div class="exceed-msg">
+            <img src="/images/Stop-sign.png" class="stop-sign-pic" />PLEASE KEEP
+            IT SHORT!<img src="/images/Stop-sign.png" class="stop-sign-pic" />
+          </div>
+          <h2>Compose Tweet</h2>
+          <form id="text-area" action="/tweets" method="POST">
+            <textarea
+              id="check-text"
+              name="text"
+              rows="1.5"
+              ;
+              placeholder="What are you humming about?"
+            ></textarea>
+            <div class="comment-button-box">
+              <input
+                style=" background-color: rgb(0, 0, 153); color: white"
+                ;
+                type="submit"
+                value="Tweet"
+              />
+              <span class="counter">140</span>
+            </div>
+          </form>
+        </section>
+        <section id="tweets-container"></section>
+      </main>
+    </div>
   </body>
 </html>

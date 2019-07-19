@@ -1,0 +1,82 @@
+.user-tweets {
+  border: 3px solid black;
+  border-color: black;
+  padding: 10px;
+  margin: 10px 0;
+  margin-top: 50px;
+  opacity: 0.65;
+}
+
+/*-----------------------------------------------------TWEETS HOVER STYLING----------------------------------------------------------*/
+
+.user-tweets:hover {
+  box-shadow: 5px 5px #9fc2e3;
+  opacity: 1;
+}
+
+/*-----------------------------------------------------EXISITNG TWEETS STYLING----------------------------------------------------------*/
+
+.sentTweets {
+  font-family: "Open Sans Condensed", sans-serif;
+  border-bottom: 3px solid black;
+  font-size: 20px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  overflow: scroll;
+}
+
+/*-------------------------------------------------------ARROW BUTTON TO RETURN TO THE TOP---------------------------------------------------*/
+
+#return-to-top {
+  background-image: url("/images/arrow-up.png");
+  position: fixed;
+  bottom: 20px;
+  right: -5px;
+  width: 65px;
+  height: 65px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#return-to-top i {
+  margin: 0;
+  position: relative;
+  left: 16px;
+  top: 13px;
+  font-size: 19px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+
+.article-header {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 20px;
+  align-items: baseline;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+.article-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  border-color: black;
+  padding: 0 1.5em;
+}
